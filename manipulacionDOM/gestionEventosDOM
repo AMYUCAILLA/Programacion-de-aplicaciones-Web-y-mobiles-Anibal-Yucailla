@@ -1,0 +1,16 @@
+// Selección del elemento
+const button = document.getElementById('exampleButton');
+
+// Función manejadora del evento
+function handleClick() {
+  alert('Botón Clickeado');
+}
+
+// Añadir un evento de clic
+button.addEventListener('click', handleClick);
+
+// Eliminar el evento de clic después de 5 segundos
+setTimeout(() => {
+  button.removeEventListener('click', handleClick);
+}, 5000);
+

@@ -1,0 +1,8 @@
+// Añadir un nuevo elemento al DOM
+const newElement = document.createElement('div');
+newElement.textContent = 'Nuevo Elemento';
+document.body.appendChild(newElement);
+
+// Eliminar el elemento añadido
+newElement.remove();
+

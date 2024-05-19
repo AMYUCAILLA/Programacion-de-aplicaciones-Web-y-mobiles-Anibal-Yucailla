@@ -1,0 +1,13 @@
+// Ejemplo de Callback
+function fetchData(callback) {
+  setTimeout(() => {
+    callback("Data retrieved");
+  }, 1000);
+}
+
+function logData(data) {
+  console.log(data);
+}
+
+fetchData(logData);
+

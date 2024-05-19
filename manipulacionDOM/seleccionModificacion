@@ -1,0 +1,4 @@
+// Selección de un elemento por ID y modificación de su contenido
+const element = document.getElementById('exampleElement');
+element.textContent = 'Texto Modificado';
+element.style.color = 'blue';
