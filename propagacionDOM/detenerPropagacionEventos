@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stop Propagation</title>
+    <style>
+        div, p, a {
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">DIV
+        <p id="p1">P
+            <a id="a1" href="#">A</a>
+        </p>
+    </div>
+    <script>
+        function stopEvent(event) {
+            console.log(`Event on ${event.currentTarget.tagName} stopped`);
+            event.stopPropagation();
+        }
+
+        document.getElementById("div1").addEventListener("click", stopEvent, false);
+        document.getElementById("p1").addEventListener("click", stopEvent, false);
+        document.getElementById("a1").addEventListener("click", stopEvent, false);
+    </script>
+</body>
+</html>
