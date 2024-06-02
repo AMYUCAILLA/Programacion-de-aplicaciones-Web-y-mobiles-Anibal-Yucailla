@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="description" content="mi pagina de gatitos"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Web Movil ITI</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="" alt="Logo de la empresa" class="image_cat"> 
+            <ul>
+                <li>Gimnasio</li>
+                <li>Desayunar</li>
+            </ul>
+        </nav>
+    </header>
+    <main></main>
+    <aside></aside>
+    <footer></footer>
+    <script> 
+        const API = `https://api.thecatapi.com/v1/images/search?limit=5`; // Cambié para obtener más de una imagen
+        let catImages = [];
+
+        const fetchCatImages = async () => {
+            try {
+                const response = await fetch(API);
+                const data = await response.json();
+                catImages = data;
+                console.log('Cat images array:', catImages);
+                catImages.forEach((image, index) => {
+                    console.log(`Index: ${index}`, image);
+                });
+            } catch (error) {
+                console.error('Error fetching cat images:', error);
+            }
+        };
+
+        fetchCatImages();
+    </script>
+</body>
+</html>
