@@ -1,0 +1,20 @@
+/* src/Comment.css */
+.comment {
+    margin-top: 20px;
+  }
+  
+  .comment textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .comment button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
